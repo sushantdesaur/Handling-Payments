@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\StripePaymentController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +26,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('stripe', [StripePaymentController::class, 'stripe']);
+Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
