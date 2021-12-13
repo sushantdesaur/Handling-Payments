@@ -22,8 +22,7 @@
         }
     </style>
 </head>
-<body>
-  
+<body>  
 <div class="container">
   
     <h1>Laravel 8 - Stripe Payment Gateway</h1>
@@ -57,7 +56,18 @@
                             data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
                             id="payment-form">
                         @csrf
-  
+                        <!-- <div class='form-row row'>
+                            <div class='col-xs-12 form-group required'>
+                                <label class='control-label'>Customer Name</label> <input
+                                    class='form-control' size='4' type='text'>
+                            </div>
+                        </div>
+                        <div class='form-row row'>
+                            <div class='col-xs-12 form-group required'>
+                                <label class='control-label'>Address</label> <input
+                                    class='form-control' size='4' type='text'>
+                            </div>
+                        </div> -->
                         <div class='form-row row'>
                             <div class='col-xs-12 form-group required'>
                                 <label class='control-label'>Name on Card</label> <input
