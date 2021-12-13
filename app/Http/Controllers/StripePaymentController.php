@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Session;
 use Stripe;
-   
+
 class StripePaymentController extends Controller
 {   
     /**
@@ -48,7 +48,7 @@ class StripePaymentController extends Controller
 
         Stripe\Charge::create ([
             "customer" => $customer->id,
-            "amount" => 300 * 100,
+            "amount" => 500 * 100,
             "currency" => "usd",
             "description" => "Test payment from stripe.test." , 
             ]);
