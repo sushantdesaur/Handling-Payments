@@ -27,11 +27,12 @@ class StripePaymentController extends Controller
      */
     public function stripePost(Request $request)
     {   
+        
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-
+        dd($input = $request->input());
         $customer = \Stripe\Customer::create([
-            'name' => 'Jenny Rosen',
-            'email' => 'jenyy@hotmail.co.us',
+            'name' => "John Snow",
+            'email' => 'john@hotmail.co.us',
             'address' => [
                 'line1' => '510 Townsend St',
                 'postal_code' => '98140',
@@ -57,4 +58,9 @@ class StripePaymentController extends Controller
           
         return back();
     }
+
+    
+
+        
+    
 }

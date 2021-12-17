@@ -27,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('stripe', [StripePaymentController::class, 'stripe']);
-Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
+Route::get('checkout', [StripePaymentController::class, 'stripe']);
+Route::post('checkout', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
 
 Route::view('/courses', 'courses.course');
