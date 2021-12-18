@@ -37,19 +37,19 @@
                                 <div class="row">
                                     <div class="col-xl-6 col-md-12">
                                         <div class="form-floating mb-3 required">
-                                            <input type="text" name="fname" class='form-control required' id="floatingInputInvalid" placeholder="First Name" required> 
+                                            <input type="text" name="fname" class='form-control required' id="floatingInputInvalid" placeholder="First Name" maxlength="20" required> 
                                             <label for="floatingInputInvalid">First Name</label>             
                                         </div>
                                     </div>
                                     <div class="col-xl-6 col-md-12">
                                         <div class="form-floating mb-3 required">
-                                            <input type="text" name="lname" class='form-control lname required' id="floatingInputInvalid" placeholder="Last Name" required> 
+                                            <input type="text" name="lname" class='form-control lname required' id="floatingInputInvalid" placeholder="Last Name" maxlength="20" required> 
                                             <label for="floatingInputInvalid">Last Name</label>             
                                         </div>                                
                                     </div>
                                     <div class="col-xl-12 col-md-12">
                                         <div class="form-floating mb-3 required">
-                                            <input type="email" name="email" class="form-control email" id="floatingInputInvalid" placeholder="name@example.com" required>
+                                            <input type="email" name="email" class="form-control email" id="floatingInputInvalid" placeholder="name@example.com" maxlength="30" required>
                                             <label for="floatingInputInvalid">Email address</label>
                                         </div>                                
                                     </div>
