@@ -32,9 +32,9 @@ class StripePaymentController extends Controller
         
         $customer = \Stripe\Customer::create([
             'name' => "$request->fname $request->lname",
-            'email' => $request->email,
+            'email' => "$request->email",
             'address' => [
-                'line1' => $request->ad_li_1,
+                "line1" => $request->ad_li_1,
                 'line2' => $request->ad_li_2,
                 'postal_code' => $request->zip,
                 'city' => $request->city,
@@ -44,8 +44,7 @@ class StripePaymentController extends Controller
         ]);
 
         \Stripe\Customer::createSource(
-            $customer->id,
-        
+            $customer->id, 
             ['source' => $request->stripeToken]
         );
 
@@ -53,7 +52,8 @@ class StripePaymentController extends Controller
             "customer" => $customer->id,
             "amount" => $request->amount * 100,
             "currency" => "usd",
-            "description" => "Test payment from stripe.test." , 
+            "description" => $request->course,
+            "metadata" => ["Contact" => $request->phone]     
             ]);
   
         Session::flash('success', 'Payment successful!');

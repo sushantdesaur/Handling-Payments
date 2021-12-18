@@ -354,14 +354,15 @@
                                 <div class="row">
                                     <div class="col-xl-12 col-md-12">
                                         <div class='form-floating card mb-3 required'>
-                                            <input autocomplete='off' name="course" class='form-control course-name' id="floatingInput" placeholder="Course Name">
+                                            <input autocomplete='off' name="course" class='form-control course-name' id="floatingInput" placeholder="Course Name"  maxlength="50" required>
                                             <label for="floatingInput">Course Name</label> 
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-md-12">
                                         <div class='form-floating card mb-3 required'>
-                                            <input autocomplete='off'  name="amount" class='form-control amount' id="floatingInput" placeholder="Amount">
+                                            <input autocomplete='off'  name="amount" class='form-control amount' id="floatingInput" placeholder="Amount" maxlength="10" required>
                                             <label for="floatingInput">Amount</label> 
+                                            <div id="amountHelp" class="form-text">In US Dollars</div>
                                         </div>
                                     </div>
                                     <div class="col-xl-12 col-md-12">
@@ -372,20 +373,23 @@
                                     </div>
                                     <div class="col-xl-4 col-md-12 ">
                                         <div class='form-floating cvc mb-3 required'>
-                                            <input autocomplete='off' class='form-control card-cvc' id="floatingInput" placeholder="ex. 311" maxlength="3" required>
-                                            <label for="floatingInput">CVC</label>    
+                                            <input autocomplete='off' class='form-control card-cvc' id="floatingInput" placeholder="ex. 311" maxlength="4" required>
+                                            <label for="floatingInput">CVC</label>
+                                            <div id="emailHelp" class="form-text">3 or 4-Digit</div>  
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-12 ">
                                         <div class='form-floating expiration mb-3 required'>
                                             <input class='form-control card-expiry-month' id="floatingInput" placeholder='MM' maxlength="2" required>
                                             <label for="floatingInput">Expiration Month</label>
+                                            <div id="expirationMonth" class="form-text">MM</div>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-12">
                                         <div class='form-floating expiration mb-3 required'>
                                             <input class='form-control card-expiry-year' id="floatingInput" placeholder='YYYY' maxlength="4" required>
                                             <label for="floatingInput">Expiration Year</label> 
+                                            <div id="expirationYear" class="form-text">YYYY</div>
                                         </div>
                                     </div>
                                 </div>
@@ -393,7 +397,7 @@
                             
                             
                             <div class="col-xl-6 col-md-12">
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now</button>
+                                <button class="btn btn-success btn-lg btn-block" type="submit">Pay Now</button>
                             </div>
                         </div>
                         
