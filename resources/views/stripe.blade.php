@@ -333,6 +333,8 @@
                                                 <option value="ZM">Zambia</option>
                                                 <option value="ZW">Zimbabwe</option>
                                              </select>
+                                             <label for="floatingInputInvalid">Select your Country:</label>
+
                                             {{-- <input type="text" name="country" class="form-control zip-code" id="floatingInputInvalid" placeholder="country" required>
                                             <label for="floatingInputInvalid">Country</label> --}}
                                         </div>                                
