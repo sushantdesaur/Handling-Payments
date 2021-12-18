@@ -31,7 +31,7 @@ class StripePaymentController extends Controller
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         
         $customer = \Stripe\Customer::create([
-            'name' => $request->fname,
+            'name' => "$request->fname $request->lname",
             'email' => $request->email,
             'address' => [
                 'line1' => $request->ad_li_1,
