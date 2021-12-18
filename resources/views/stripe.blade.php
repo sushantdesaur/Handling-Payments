@@ -364,25 +364,25 @@
                                     </div>
                                     <div class="col-xl-12 col-md-12">
                                         <div class='form-floating card mb-3 required'>
-                                            <input autocomplete='off' class='form-control card-number' id="floatingInput" placeholder="Enter card number">
+                                            <input autocomplete='off' class='form-control card-number' id="floatingInput" placeholder="Enter card number" maxlength="19" required>
                                             <label for="floatingInput">Card Number</label> 
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-12 ">
                                         <div class='form-floating cvc mb-3 required'>
-                                            <input autocomplete='off' class='form-control card-cvc' id="floatingInput" placeholder="ex. 311">
+                                            <input autocomplete='off' class='form-control card-cvc' id="floatingInput" placeholder="ex. 311" maxlength="3" required>
                                             <label for="floatingInput">CVC</label>    
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-12 ">
                                         <div class='form-floating expiration mb-3 required'>
-                                            <input class='form-control card-expiry-month' id="floatingInput" placeholder='MM'>
+                                            <input class='form-control card-expiry-month' id="floatingInput" placeholder='MM' maxlength="2" required>
                                             <label for="floatingInput">Expiration Month</label>
                                         </div>
                                     </div>
                                     <div class="col-xl-4 col-md-12">
                                         <div class='form-floating expiration mb-3 required'>
-                                            <input class='form-control card-expiry-year' id="floatingInput" placeholder='YYYY'>
+                                            <input class='form-control card-expiry-year' id="floatingInput" placeholder='YYYY' maxlength="4" required>
                                             <label for="floatingInput">Expiration Year</label> 
                                         </div>
                                     </div>
@@ -391,7 +391,7 @@
                             
                             
                             <div class="col-xl-6 col-md-12">
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now</button>
                             </div>
                         </div>
                         
