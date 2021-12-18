@@ -27,29 +27,30 @@ class StripePaymentController extends Controller
      */
     public function stripePost(Request $request)
     {   
-        
+    
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
-        dd($input = $request->input());
+        
         $customer = \Stripe\Customer::create([
-            'name' => "John Snow",
-            'email' => 'john@hotmail.co.us',
+            'name' => $request->fname,
+            'email' => $request->email,
             'address' => [
-                'line1' => '510 Townsend St',
-                'postal_code' => '98140',
-                'city' => 'San Francisco',
-                'state' => 'CA',
-                'country' => 'US',
+                'line1' => $request->ad_li_1,
+                'postal_code' => $request->zip,
+                'city' => $request->city,
+                'state' => $request->state,
+                'country' => $request->country,
             ],
         ]);
 
         \Stripe\Customer::createSource(
             $customer->id,
+        
             ['source' => $request->stripeToken]
         );
 
         Stripe\Charge::create ([
             "customer" => $customer->id,
-            "amount" => 500 * 100,
+            "amount" => $request->amount * 100,
             "currency" => "usd",
             "description" => "Test payment from stripe.test." , 
             ]);
