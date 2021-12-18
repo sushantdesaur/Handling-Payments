@@ -13,7 +13,7 @@
         <div class="col">
             <div class="card">
                 <div class="card-header bg-primary">
-                    <h3 class="card-title text-white m-0" >Payment Details</h3>
+                    <h3 class="card-title text-white m-0" >Checkout</h3>
                 </div>
                 <div class="card-body" >
                     @if (Session::has('success'))
@@ -339,7 +339,7 @@
                                     </div>
                                     <div class="col-xl-8 col-md-12">
                                         <div class="form-floating mb-3 ">
-                                            <input type="text" name="phone" class="form-control phone" id="floatingInputInvalid" placeholder="Contact Number" required>
+                                            <input type="text" name="phone" class="form-control phone" id="floatingInputInvalid" maxlength="15" placeholder="Contact Number" required>
                                             <label for="floatingInputInvalid">Contact Number</label>
                                         </div>                                
                                     </div>

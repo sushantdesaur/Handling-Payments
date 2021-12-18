@@ -35,6 +35,7 @@ class StripePaymentController extends Controller
             'email' => $request->email,
             'address' => [
                 'line1' => $request->ad_li_1,
+                'line2' => $request->ad_li_2,
                 'postal_code' => $request->zip,
                 'city' => $request->city,
                 'state' => $request->state,
